@@ -66,7 +66,7 @@ function writeState(obj) {
 }
 
 async function main() {
-  const res = await fetch(API_URL, { headers: { "User-Agent": "stock-bot/1.0", "Authorization": `Key ${API_KEY}`} });
+  const res = await fetch(API_URL, { headers: { "User-Agent": "Chrome/140.0.0.0", "Authorization": `Key ${API_KEY}`} });
   if (!res.ok) {
     throw new Error(`API ${res.status} ${res.statusText}`);
   }
