@@ -74,11 +74,16 @@ async function main() {
             "User-Agent": UA,
             "Accept": "application/json",
             "Accept-Language": "en-US,en;q=0.9",
-            "Authorization": `Key ${API_KEY}`
+            "Authorization": `Key ${API_KEY}`,
+            "Origin": "https://seller-api.takealot.com",
+            "Referer": "https://seller-api.takealot.com/",
+            "DNT": "1"
         }
     });
     if (!res.ok) {
-        throw new Error(`API ${res.status} ${res.statusText}`);
+        let preview = "";
+        try { preview = (await res.text()).slice(0, 500); } catch { }
+        throw new Error(`API ${res.status} ${res.statusText} :: ${preview}`);
     }
     const data = await res.json();
 
