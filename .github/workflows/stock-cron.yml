@@ -29,6 +29,7 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           API_KEY: ${{ secrets.API_KEY }}
+          USER_AGENT: ${{ secrets.USER_AGENT }}
           # EMAIL_ENABLED: ${{ secrets.EMAIL_ENABLED }}
           # GMAIL_USER: ${{ secrets.GMAIL_USER }}
           # GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
